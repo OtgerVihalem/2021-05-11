@@ -19,15 +19,6 @@ class Menüü:
             else:
                 print(self.kuvaToidudJaHinnad(toit), "Ei ole eri pakkumine")
 
-
-
-
-
-
-
-
-
-
     def leiaKallimToit(self):
         maxHind = 0
         for toit in self.menüüToidud:
@@ -46,12 +37,9 @@ toiduTest2 = Toit("Sealiha guljašš", 4.25, False)
 toiduTest3 = Toit("Pasta bolognese", 3.00, True)
 
 
-
 menüüTestimine.lisaToit(toiduTest1)
 menüüTestimine.lisaToit(toiduTest2)
 menüüTestimine.lisaToit(toiduTest3)
-
 menüüTestimine.kuvaPäevaEri()
-
 menüüTestimine.leiaKallimToit()
 

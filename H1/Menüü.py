@@ -6,31 +6,52 @@ class Menüü:
         self.menüüToidud = []
 
     def lisaToit(self, lisatudToit):
-        self.toiduNimetus.append(lisatudToit)
+        self.menüüToidud.append(lisatudToit)
 
-    def kuvaToidudJaHinnad(self):
-        kuvatudToitJaHind = self.toiduNimetus + " " + self.toiduHind
+    def kuvaToidudJaHinnad(self, uuritavToit):
+        kuvatudToitJaHind = uuritavToit.toiduNimetus , uuritavToit.toiduHind
         return kuvatudToitJaHind
 
     def kuvaPäevaEri(self):
-        if self.toiduPäevaEri = True:
-            print(self.kuvaToidudJaHinnad())
-        else:
-            print("Ei ole eri pakkumine")
+        for toit in self.menüüToidud:
+            if toit.toiduPäevaEri == True:
+                print(self.kuvaToidudJaHinnad(toit))
+            else:
+                print(self.kuvaToidudJaHinnad(toit), "Ei ole eri pakkumine")
+
+
+
+
+
+
+
+
+
 
     def leiaKallimToit(self):
-        if self.toiduHind > 5:
-            return True
-        else:
-            return False
+        maxHind = 0
+        for toit in self.menüüToidud:
+            if toit.toiduHind > maxHind:
+                maxHind = toit.toiduHind
+                kallimToit = toit
 
-menüüTestimine = Menüü()
+        print(kallimToit.toiduNimetus, kallimToit.toiduHind)
+
+menüüTestimine = Menüü("Lõuna Menüü")
 
 toiduTest1 = Toit("Ühepaja toit", 3.75, False)
 
 toiduTest2 = Toit("Sealiha guljašš", 4.25, False)
 
-toiduTest3 = Toit("Pasta bolognese", 3.00, False)
+toiduTest3 = Toit("Pasta bolognese", 3.00, True)
 
 
+
+menüüTestimine.lisaToit(toiduTest1)
+menüüTestimine.lisaToit(toiduTest2)
+menüüTestimine.lisaToit(toiduTest3)
+
+menüüTestimine.kuvaPäevaEri()
+
+menüüTestimine.leiaKallimToit()
 

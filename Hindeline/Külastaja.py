@@ -6,15 +6,19 @@ class Külastaja:
         self.külastajaPerekonnanimi = perekonnanimi
         self.külastajaLaenatudRaamatud = []
 
-    def laenutaRaamat(self):
-        self.külastajaLaenatudRaamatud.append()
+    def laenutaRaamat(self, lisatudRaamat):
+        self.külastajaLaenatudRaamatud.append(lisatudRaamat)
+
+
+    def tagastaRaamat(self, lisatudRaamat):
+        self.külastajaLaenatudRaamatud.append(lisatudRaamat)
+        self.külastajaLaenatudRaamatud.remove(lisatudRaamat)
+
+
+    def kuvaLaenutatudRaamatud(self):
 
 
 
-    def tagastaRaamat(self):
-
-
-    def kuvaLaenatudRaamatud(self):
 
 
 

@@ -16,10 +16,21 @@ class Külastaja:
 
 
     def kuvaLaenutatudRaamatud(self):
+        for uuritavRaamat in self.külastajaLaenatudRaamatud:
+            if uuritavRaamat.raamatuTiitel == True:
+                print("Laenatud raamatu tiitel: ", uuritavRaamat.raamatuTiitel)
 
 
 
+külaliseTestimine = Külastaja("Joosep", "Joosepson")
 
+raamatuTest1 = Raamat("Mingi vahva tiitel", "Keegi kaval autor", 305)
+raamatuTest2 = Raamat("Parimad koka road", "Kuulus Ekspert", 275)
+
+külaliseTestimine.laenutaRaamat(raamatuTest1)
+külaliseTestimine.laenutaRaamat(raamatuTest2)
+
+külaliseTestimine.kuvaLaenutatudRaamatud()
 
 
 

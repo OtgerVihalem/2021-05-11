@@ -3,6 +3,7 @@ class Raamat:
         self.raamatuTiitel = tiitel
         self.raamatuAutor = autor
         self.raamatuLehekülgedeArv = lehekülgedeArv
+        self.laenutatud = False
 
 
 

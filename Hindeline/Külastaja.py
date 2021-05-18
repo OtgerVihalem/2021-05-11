@@ -6,7 +6,7 @@ class Külastaja:
         self.külastajaPerekonnanimi = perekonnanimi
         self.külastajaLaenatudRaamatud = []
 
-    def laenatudRaamat(self):
+    def laenutaRaamat(self):
         self.külastajaLaenatudRaamatud.append()
 
 

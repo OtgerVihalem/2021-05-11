@@ -6,12 +6,13 @@ class Külastaja:
         self.külastajaPerekonnanimi = perekonnanimi
         self.külastajaLaenatudRaamatud = []
 
-    def laenutaRaamat(self, lisatudRaamat):
-        self.külastajaLaenatudRaamatud.append(lisatudRaamat)
-        for raamat in self.külastajaLaenatudRaamatud:
-            if raamat.laenutatud == True:
-                print("Raamatut ei saa laenutada, see on juba välja laenatud!", raamat.raamatuTiitel)
 
+    def laenutaRaamat(self, lisatudRaamat):
+        if not lisatudRaamat.laenutatud:
+            lisatudRaamat.laenutatud = True
+            self.külastajaLaenatudRaamatud.append(lisatudRaamat)
+        else:
+            print("Raamatut ei saa laenutada, see on juba välja laenatud!", lisatudRaamat.raamatuTiitel)
 
 
     def tagastaRaamat(self, lisatudRaamat):
@@ -31,9 +32,10 @@ raamatuTest2 = Raamat("Parimad koka road", "Kuulus Ekspert", 275)
 
 külaliseTestimine.laenutaRaamat(raamatuTest1)
 külaliseTestimine.laenutaRaamat(raamatuTest2)
-print(külaliseTestimine.külastajaLaenatudRaamatud)
+külaliseTestimine.tagastaRaamat(raamatuTest1)
+#print(külaliseTestimine.külastajaLaenatudRaamatud)
 külaliseTestimine.laenutaRaamat(raamatuTest2)
-print(külaliseTestimine.külastajaLaenatudRaamatud)
+#print(külaliseTestimine.külastajaLaenatudRaamatud)
 
 külaliseTestimine.kuvaLaenutatudRaamatud()
 

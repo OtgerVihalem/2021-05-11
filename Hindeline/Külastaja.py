@@ -31,7 +31,9 @@ raamatuTest2 = Raamat("Parimad koka road", "Kuulus Ekspert", 275)
 
 külaliseTestimine.laenutaRaamat(raamatuTest1)
 külaliseTestimine.laenutaRaamat(raamatuTest2)
+print(külaliseTestimine.külastajaLaenatudRaamatud)
 külaliseTestimine.laenutaRaamat(raamatuTest2)
+print(külaliseTestimine.külastajaLaenatudRaamatud)
 
 külaliseTestimine.kuvaLaenutatudRaamatud()
 

@@ -10,9 +10,8 @@ class Külastaja:
         self.külastajaLaenatudRaamatud.append(lisatudRaamat)
         for raamat in self.külastajaLaenatudRaamatud:
             if raamat.laenutatud == True:
-                print("Raamat on laenatud: ", raamat.raamatuTiitel)
-            else:
-                print("Raamat ei ole laenatud: ", raamat.raamatuTiitel)
+                print("Raamatut ei saa laenutada, see on juba välja laenatud!", raamat.raamatuTiitel)
+
 
 
     def tagastaRaamat(self, lisatudRaamat):
@@ -31,6 +30,7 @@ raamatuTest1 = Raamat("Mingi vahva tiitel", "Keegi kaval autor", 305)
 raamatuTest2 = Raamat("Parimad koka road", "Kuulus Ekspert", 275)
 
 külaliseTestimine.laenutaRaamat(raamatuTest1)
+külaliseTestimine.laenutaRaamat(raamatuTest2)
 külaliseTestimine.laenutaRaamat(raamatuTest2)
 
 külaliseTestimine.kuvaLaenutatudRaamatud()

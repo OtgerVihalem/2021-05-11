@@ -40,7 +40,7 @@ class Õpilane:
 
 õpilaseTestimine = Õpilane("Joosep Joosepson", "ABC21")
 
-kodutööTest1 = Kodutöö("Esse mingil teemal", False)
+kodutööTest1 = Kodutöö("Esse mingil teemal", True)
 kodutööTest2 = Kodutöö("Kirjand mingil teemal", True)
 
 õpilaseTestimine.lisaKodutöö(kodutööTest1)

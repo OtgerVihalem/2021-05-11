@@ -5,16 +5,3 @@ class Raamat:
         self.raamatuLehekülgedeArv = lehekülgedeArv
         self.laenutatud = False
 
-
-
-
-
-
-
-
-
-
-
-
-
-

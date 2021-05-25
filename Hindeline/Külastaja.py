@@ -8,17 +8,20 @@ class Külastaja:
 
     def laenutaRaamat(self, lisatudRaamat):
         self.külastajaLaenatudRaamatud.append(lisatudRaamat)
+        for raamat in self.külastajaLaenatudRaamatud:
+            if raamat.laenutatud == True:
+                print("Raamat on laenatud: ", raamat.raamatuTiitel)
+            else:
+                print("Raamat ei ole laenatud: ", raamat.raamatuTiitel)
 
 
     def tagastaRaamat(self, lisatudRaamat):
-        self.külastajaLaenatudRaamatud.append(lisatudRaamat)
         self.külastajaLaenatudRaamatud.remove(lisatudRaamat)
 
 
     def kuvaLaenutatudRaamatud(self):
         for uuritavRaamat in self.külastajaLaenatudRaamatud:
-            if uuritavRaamat.raamatuTiitel == True:
-                print("Laenatud raamatu tiitel: ", uuritavRaamat.raamatuTiitel)
+            print("Laenatud raamatu tiitel: ", uuritavRaamat.raamatuTiitel)
 
 
 
@@ -31,17 +34,5 @@ külaliseTestimine.laenutaRaamat(raamatuTest1)
 külaliseTestimine.laenutaRaamat(raamatuTest2)
 
 külaliseTestimine.kuvaLaenutatudRaamatud()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
